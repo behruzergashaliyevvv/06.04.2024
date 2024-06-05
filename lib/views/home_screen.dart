@@ -6,48 +6,52 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home'),
-        actions: [
-          
-        ],
+        actions: [],
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+             const DrawerHeader(
               child: Text('Drawer Header'),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
             ),
             ListTile(
-              title: Text('Notes'),
+              title: const Text('Notes'),
               onTap: () {
                 Navigator.pushNamed(context, '/notes');
               },
             ),
             ListTile(
-              title: Text('Plans'),
+              title: const Text('Plans'),
               onTap: () {
                 Navigator.pushNamed(context, '/plans');
               },
             ),
             ListTile(
-              title: Text('Courses'),
+              title: const Text('Courses'),
               onTap: () {
                 Navigator.pushNamed(context, '/courses');
               },
             ),
             ListTile(
-              title: Text('Quiz'),
+              title: const Text('Quiz'),
               onTap: () {
                 Navigator.pushNamed(context, '/quiz');
+              },
+            ),
+            ListTile(
+              title: const Text('Settings'),
+              onTap: () {
+                Navigator.pushNamed(context, '/settings');
               },
             ),
           ],
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [],
